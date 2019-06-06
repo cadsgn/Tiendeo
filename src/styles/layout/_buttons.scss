@@ -1,0 +1,25 @@
+.button {
+  padding: 15px;
+  cursor: pointer;
+}
+.menu-button {
+  height: 50px;
+  background-color: $SecondaryColor;
+  color: #ffffff;
+}
+
+.sidebar {
+  li.active {
+    border-left: 4px solid $SecondaryColor;
+  }
+}
+
+.addTask {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .menu-button {
+    pointer-events: none;
+  }
+}

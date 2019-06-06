@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "slug": "Backlog",
+    "taskCategory": "Backlog",
+    "taskPriority": "High",
+    "taskContent": "Company website redesign",
+    "taskComents": "3",
+    "taskFiles": "5"
+  },
+  {
+    "id": 2,
+    "slug": "In Progress",
+    "taskCategory": "In Progress",
+    "taskPriority": "Low",
+    "taskContent": "Company website redesign",
+    "taskComents": "4",
+    "taskFiles": "2"
+  },
+  {
+    "id": 3,
+    "slug": "Review",
+    "taskCategory": "Review",
+    "taskPriority": "Medium",
+    "taskContent": "Company website redesign",
+    "taskComents": "0",
+    "taskFiles": "1"
+  },
+  {
+    "id": 4,
+    "slug": "Complete",
+    "taskCategory": "Complete",
+    "taskPriority": "Low",
+    "taskContent": "Company website redesign",
+    "taskComents": "6",
+    "taskFiles": "2"
+  }
+]
