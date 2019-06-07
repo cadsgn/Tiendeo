@@ -10,13 +10,12 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 20px;
-    padding: 0 20px;
-    min-width: 200px;
+    padding: 0 20px 20px;
 
-    .Backlog { border-top: 2px solid $BacklogColor; }
-    .Progress { border-top: 2px solid $InProgressColor; }
-    .Review { border-top: 2px solid $ReviewColor; }
-    .Complete { border-top: 2px solid $CompleteColor; }
+    .item.Backlog { border-top: 2px solid $BacklogColor; }
+    .item.Progress { border-top: 2px solid $InProgressColor; }
+    .item.Review { border-top: 2px solid $ReviewColor; }
+    .item.Complete { border-top: 2px solid $CompleteColor; }
 
     .item {
       background-color: #f1f1f1;
@@ -30,27 +29,18 @@
       }
     }
 
-    .tasks {
-      background-color: #ffffff;
-      margin: 10px 0;
-      padding: 10px;
-      cursor: grab;
-      box-shadow: 0px 0px 5px #cccccc;
-
-      .tasksFooter {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-gap: 10px;
-        padding: 0 10px;
-      }
-    }
-
     .tasks:active {
       cursor: grabbing;
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $MiddleScreen) {
+    .tables {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  @media only screen and (max-width: $MobileScreen) {
     .tables {
       grid-template-columns: auto;
     }

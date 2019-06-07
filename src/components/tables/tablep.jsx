@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
+import React from 'react'
 import Data from '../../data/data.json'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CardP from '../../components/cards/cardp.jsx'
 
 class Tablep extends React.Component {
@@ -19,10 +19,10 @@ class Tablep extends React.Component {
               <CardP />
               {this.state.cardp.map(node => <CardP />)}
               <div onClick={this.addCardp} id="bg" class="addTask">
-                <p>Add task</p>
+                <p>Add task&nbsp;<FontAwesomeIcon icon="plus-circle" /></p>
               </div>
             </div>
-          }})}
+          } return "" })}
       </div>
     );
   }

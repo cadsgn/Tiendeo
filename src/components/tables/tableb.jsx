@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
-// import $ from 'jquery';
+import React from 'react'
 import Data from '../../data/data.json'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CardB from '../../components/cards/cardb.jsx'
 
 // window.renderMyReactApp = element => ReactDOM.render(<CardB />, element);
@@ -12,11 +11,6 @@ class Tableb extends React.Component {
     this.state = { cardb: [] }
   }
   addCardb = ev => { this.setState(prev => ({ cardb: [...prev.cardb, ''] })) }
-  // componentDidMount() {
-  //   $("#bg").click(function() {
-  //     window.renderMyReactApp($('#a1')[0]);
-  //   });
-  // }
   render() {
     return (
       <div>
@@ -27,10 +21,10 @@ class Tableb extends React.Component {
               <CardB />
               {this.state.cardb.map(node => <CardB />)}
               <div onClick={this.addCardb} id="bg" class="addTask">
-                <p>Add task</p>
+                <p>Add task&nbsp;<FontAwesomeIcon icon="plus-circle" /></p>
               </div>
             </div>
-          }})}
+          } return "" })}
       </div>
     );
   }

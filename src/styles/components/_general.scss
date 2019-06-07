@@ -26,10 +26,23 @@ h4 {
   z-index: 1;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $MobileScreen) {
   .wrapper {
-    display: grid;
     grid-template-columns: auto;
+  }
+
+  .wrapper.active {
+    grid-template-columns: 150px auto;
+  }
+}
+
+@media only screen and (max-width: $SmallScreen) {
+  .wrapper {
+    grid-template-columns: auto;
+  }
+
+  .wrapper.active {
+    grid-template-columns: 100px auto;
   }
 }
 

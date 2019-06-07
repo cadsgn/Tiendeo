@@ -11,4 +11,18 @@
     padding: 15px;
     border-right: 1px solid $TerciaryColor;
   }
+
+  div:last-child {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: $SmallScreen) {
+  .header {
+    grid-template-columns: 100px auto auto auto;
+
+    h4 {
+      text-align: center;
+    }
+  }
 }

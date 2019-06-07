@@ -6,6 +6,11 @@
   height: 50px;
   background-color: $SecondaryColor;
   color: #ffffff;
+
+  span {
+    opacity: 1;
+    transition: 0.5s;
+  }
 }
 
 .sidebar {
@@ -18,8 +23,36 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: $MobileScreen) {
+  .search {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $MobileScreen) {
   .menu-button {
     pointer-events: none;
+
+    .headerIcon {
+      opacity: 0;
+      transition: 0.5s;
+    }
   }
+}
+
+@media only screen and (max-width: $SmallScreen) {
+  .headerHide {
+    display: none;
+  }
+}
+
+input {
+  background-color: transparent;
+  color: #ffffff;
+  border: 0;
+}
+
+input::placeholder {
+  color: #ffffff;
+  font-size: 14px;
 }

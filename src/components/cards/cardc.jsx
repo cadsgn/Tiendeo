@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Data from '../../data/data.json'
 
 class CardC extends React.Component {
@@ -7,7 +8,7 @@ class CardC extends React.Component {
       <div>
           {Data.map((tableInfo, index)=>{
             if(tableInfo.taskCategory === 'Complete') {
-            return <div class='tasks'>
+            return <div class='tasks Complete'>
               <div class="tasksHeader">
                 {tableInfo.taskPriority}
               </div>
@@ -15,12 +16,12 @@ class CardC extends React.Component {
                 <p>{tableInfo.taskContent}</p>
               </div>
               <div class="tasksFooter">
-                <div class="tasksComents">{tableInfo.taskComents}</div>
-                <div class="tasksFiles">{tableInfo.taskFiles}</div>
-                <div class="tasksUser">asdf</div>
+                <div className="tasksComents"><FontAwesomeIcon icon="comment-alt" />&nbsp;{tableInfo.taskComents}</div>
+                <div className="tasksFiles"><FontAwesomeIcon icon="paperclip" />&nbsp;{tableInfo.taskFiles}</div>
+                <div className="tasksUser"><FontAwesomeIcon icon="user" /></div>
               </div>
             </div>
-          }})}
+          } return "" })}
         </div>
     );
   }

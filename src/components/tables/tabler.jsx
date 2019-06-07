@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
+import React from 'react'
 import Data from '../../data/data.json'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CardR from '../../components/cards/cardr.jsx'
 
 class Tabler extends React.Component {
@@ -19,10 +19,10 @@ class Tabler extends React.Component {
               <CardR />
               {this.state.cardr.map(node => <CardR />)}
               <div onClick={this.addCardr} id="bg" class="addTask">
-                <p>Add task</p>
+                <p>Add task&nbsp;<FontAwesomeIcon icon="plus-circle" /></p>
               </div>
             </div>
-          }})}
+          } return "" })}
       </div>
     );
   }
